@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    name: transfer
+    password: dzz123456
+    url: jdbc:mysql://localhost:3306/transfer2?useUnicode=true&useSSL=false&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&autoReconnect=true
+    username: root
+
+mybatis:
+  mapper-locations: classpath:mappers/*.xml
+
+server:
+  port: 80
+
+camunda.bpm:
+  admin-user:
+    id: kermit
+    password: superSecret
+    firstName: Kermit
+  filter:
+    create: All tasks
+camunda:
+  bpm:
+    auto-deployment-enabled: false
+    id-generator: strong
+    deployment-resource-pattern:
+      - classpath:processes/*.xml
+    job-execution:
+      enabled: true
