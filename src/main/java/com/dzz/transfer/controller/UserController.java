@@ -75,6 +75,7 @@ public class UserController {
             return ApiRestResponse.error(TransferExceptionEnum.NEED_PASSWORD);
         }
         User user = userService.login(userName, password);
+        System.out.println("测试语句");
         session.setAttribute(Constant.TRANSFER_USER, user);
         user.setPassword(null);
         return ApiRestResponse.success(user);

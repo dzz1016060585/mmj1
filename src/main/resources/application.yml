@@ -10,7 +10,7 @@ mybatis:
   mapper-locations: classpath:mappers/*.xml
 
 server:
-  port: 80
+  port: 3000
 
 camunda.bpm:
   admin-user:

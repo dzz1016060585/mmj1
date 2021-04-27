@@ -28,9 +28,9 @@ public class TransferApplication{
     @Autowired
     private RuntimeService runtimeService;
 
-    @EventListener
-    private void processPostDeploy(PostDeployEvent event) {
-        runtimeService.startProcessInstanceByKey("localApproval");
-    }
+//    @EventListener
+//    private void processPostDeploy(PostDeployEvent event) {
+//        runtimeService.startProcessInstanceByKey("localApproval");
+//    }
 
 }
